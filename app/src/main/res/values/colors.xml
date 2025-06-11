@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Soft and Elegant Purple Theme -->
+    <color name="soft_purple_bg">#EDE7F6</color>       <!-- Background -->
+    <color name="deep_purple_primary">#512DA8</color>  <!-- AppBar, Buttons -->
+    <color name="indigo_accent">#303F9F</color>        <!-- Accent (optional) -->
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+
+    <!-- Standard -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="purple_focus">#9575CD</color> <!-- Softer highlight -->
+
+</resources>
+
+
+
+
+
