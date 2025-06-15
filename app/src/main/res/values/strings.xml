@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">checkInApp</string>
+    <string name="app_name">SnapPin</string>
+    <string name="app_tagline">Share your location with friends</string>
+    <string name="check_in_title">Check In</string>
+    <string name="name_hint">Your name</string>
+    <string name="check_in_button">Check In Now</string>
+    <string name="privacy_text">Your location will be shared securely</string>
+    <string name="location_required">Location Required</string>
+    <string name="enable_location_message">Please enable location services to continue</string>
 </resources>

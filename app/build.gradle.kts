@@ -39,7 +39,7 @@ android {
         )
     }
     buildFeatures {
-        compose = true  // Enable Compose
+        viewBinding = true
     }
 
     composeOptions {

@@ -1,26 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.CheckInApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- AppBar & Button Color -->
-        <item name="colorPrimary">@color/deep_purple_primary</item>
-        <item name="colorPrimaryVariant">@color/indigo_accent</item>
-        <item name="colorOnPrimary">@color/white</item>
+    <style name="Theme.CheckInApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/button_primary</item>
+        <item name="colorPrimaryVariant">@color/gradient_bottom</item>
+        <item name="colorOnPrimary">@color/text_white</item>
 
-        <!-- Optional Accent -->
-        <item name="colorSecondary">@color/indigo_accent</item>
-        <item name="colorOnSecondary">@color/white</item>
+        <!-- Background colors -->
+        <item name="android:windowBackground">@drawable/gradient_background</item>
+        <item name="android:colorBackground">@color/gradient_bottom</item>
 
-        <!-- Background & Surface -->
-        <item name="android:colorBackground">@color/soft_purple_bg</item>
-        <item name="colorSurface">@color/white</item>
-        <item name="colorOnSurface">@color/text_primary</item>
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/text_white</item>
+        <item name="android:textColorSecondary">@color/text_white_80</item>
+        <item name="colorControlActivated">@color/text_white</item>
 
-        <!-- Text -->
-        <item name="android:textColorPrimary">@color/text_primary</item>
-        <item name="android:textColorSecondary">@color/text_secondary</item>
-        <item name="colorControlActivated">@color/purple_focus</item>
+        <!-- Button style -->
+        <item name="materialButtonStyle">@style/Widget.App.Button</item>
 
+        <!-- TextInputLayout style -->
+        <item name="textInputStyle">@style/Widget.App.TextInputLayout</item>
+
+        <!-- App bar style -->
+        <item name="toolbarStyle">@style/Widget.App.Toolbar</item>
+
+        <!-- Explicitly disable action bar -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
+
+    <!-- Button Style -->
+    <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/button_primary</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <!-- TextInput Style -->
+    <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_input_stroke</item>
+        <item name="android:textColorHint">@color/text_input_hint</item>
+        <item name="hintTextColor">@color/text_input_hint</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.App.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="titleTextColor">@color/text_white</item>
+        <item name="android:textColorPrimary">@color/text_white</item>
+        <item name="android:textColorSecondary">@color/text_white_80</item>
+    </style>
+
 </resources>
 
 
