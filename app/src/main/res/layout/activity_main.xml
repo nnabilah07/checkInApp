@@ -29,28 +29,6 @@
                 android:elevation="2dp"/>
         </FrameLayout>
 
-        <!-- ID Input -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/idInputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="Enter Your ID"
-            app:boxBackgroundMode="outline"
-            app:boxStrokeWidth="2dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextId"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Enter Your ID"
-                android:inputType="number"
-                android:minHeight="56dp"
-                android:padding="12dp"
-                android:textSize="18sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
         <!-- Name Input -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nameInputLayout"

@@ -29,7 +29,6 @@ import com.google.android.gms.location.LocationResult
 class MainActivity : AppCompatActivity() {
 
     private lateinit var nameInput: TextInputEditText
-    private lateinit var idInput: TextInputEditText
     private lateinit var statusText: TextView
     private lateinit var checkInBtn: Button
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -41,10 +40,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+22
         // Initialize views - make sure IDs match exactly with XML
         nameInput = findViewById(R.id.editTextName)
-        idInput = findViewById(R.id.editTextId)
         statusText = findViewById(R.id.textStatus)
         checkInBtn = findViewById(R.id.btnCheckIn)
         progressBar = findViewById(R.id.progressBar)
@@ -130,14 +128,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun sendCheckInData(location: Location) {
-        val url = "http://172.30.149.106/receive_checkin.php" // Replace with your actual URL
+        val url = "http://172.30.152.121/receive_checkin.php" // Correct endpoint!
+
         val name = nameInput.text.toString().takeIf { it.isNotBlank() } ?: run {
             statusText.text = "Please enter your name"
-            return
-        }
-
-        val userId = idInput.text.toString().takeIf { it.isNotBlank() } ?: run {
-            statusText.text = "Please enter your ID"
             return
         }
 
@@ -148,7 +142,7 @@ class MainActivity : AppCompatActivity() {
             { response ->
                 runOnUiThread {
                     progressBar.visibility = View.GONE
-                    statusText.text = "Check-in successful!"
+                    statusText.text = response // shows "Check-in recorded successfully!"
                 }
             },
             { error ->
@@ -162,10 +156,8 @@ class MainActivity : AppCompatActivity() {
             override fun getParams(): Map<String, String> {
                 return hashMapOf(
                     "username" to name,
-                    "user_id" to userId,
                     "latitude" to location.latitude.toString(),
-                    "longitude" to location.longitude.toString(),
-                    "timestamp" to timestamp
+                    "longitude" to location.longitude.toString()
                 )
             }
         }
