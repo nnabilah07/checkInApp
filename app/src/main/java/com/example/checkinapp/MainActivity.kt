@@ -130,7 +130,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun sendCheckInData(location: Location) {
-        val url = "http://172.30.149.106/receive_checkin.php" // Replace with your actual URL
+        val url = "http://172.30.149.106/receive_checkin.php" // Replace with actual URL
         val name = nameInput.text.toString().takeIf { it.isNotBlank() } ?: run {
             statusText.text = "Please enter your name"
             return
